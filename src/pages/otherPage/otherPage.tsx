@@ -6,6 +6,7 @@ export default class otherPage extends Component {
       count:0,
       timer:0,
       }
+  timer: number =0; //这是为了添加给this上面添加一个属性，如果直接在timer里面定义就会报错
   render() {
     return (
       <div>
@@ -15,8 +16,12 @@ export default class otherPage extends Component {
     )
   }
   componentDidMount() {
-    this.state.timer=  window.setInterval(() => {
+    this.timer=  window.setInterval(() => {
       this.setState({count: this.state.count+1})
     },1000)
+    this.abc();
+  }
+  abc =()=>{
+    console.log(this.state,'this');
   }
 }

@@ -1,9 +1,9 @@
 import './funComponent.less'
 import {useState} from 'react';
-interface propProps{
+interface propsInterface{
   name: string
 }
-export default function (props: propProps,){
+export default function (props: propsInterface,){
   const [num,setNum] = useState(0);
   setTimeout(()=>{
     setNum(9999);
